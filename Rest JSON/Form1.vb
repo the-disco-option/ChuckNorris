@@ -13,7 +13,7 @@ Public Class Form1
     End Sub
 
     Public Class Joke
-        Public Type As String
+        Public type As String
         Public value As New ValueObj
         Public Class ValueObj
             Public id As Integer
@@ -43,25 +43,30 @@ Public Class Form1
         'HACK We don't need a list or an array
         Chuck = JsonConvert.DeserializeObject(Of Joke)(responseFromServer)
         'Dim result = serial.Deserialize(responseFromServer)
-        RichTextBox1.Text = Chuck.value.joke
+        ContentBox.Text = Chuck.value.joke
+        ContentBox.Text = ContentBox.Text.Replace("&quot;", "'")
+        JokeID.Text = "Joke: " & Chuck.value.id
         ' Clean up the streams and the response.
         reader.Close()
         response.Close()
     End Sub
 
-
-
     Public Class Account
         Public Email As String
         Public Active As Boolean
     End Class
+
     Private Sub JSONTEST()
         Dim json As String = "{'Email': 'james@example.com','Active': true}"
         Dim account As Account = New Account()
         Dim testObject As Object = New Object()
         testObject = JsonConvert.DeserializeObject(json)
         account = JsonConvert.DeserializeObject(Of Account)(json)
-        Console.WriteLine(account.email)
+        Console.WriteLine(account.Email)
+    End Sub
+
+    Private Sub NewButton_Click(sender As Object, e As EventArgs) Handles NewButton.Click
+        JSONWEBTEST()
     End Sub
 
 End Class
