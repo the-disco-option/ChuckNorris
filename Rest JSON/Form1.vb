@@ -9,7 +9,6 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         JSONWEBTEST()
-        JSONTEST()
     End Sub
 
     Public Class Joke
@@ -51,19 +50,6 @@ Public Class Form1
         response.Close()
     End Sub
 
-    Public Class Account
-        Public Email As String
-        Public Active As Boolean
-    End Class
-
-    Private Sub JSONTEST()
-        Dim json As String = "{'Email': 'james@example.com','Active': true}"
-        Dim account As Account = New Account()
-        Dim testObject As Object = New Object()
-        testObject = JsonConvert.DeserializeObject(json)
-        account = JsonConvert.DeserializeObject(Of Account)(json)
-        Console.WriteLine(account.Email)
-    End Sub
 
     Private Sub NewButton_Click(sender As Object, e As EventArgs) Handles NewButton.Click
         JSONWEBTEST()
