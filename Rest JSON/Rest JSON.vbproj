@@ -120,6 +120,12 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZEKE_JSON\ZEKE_JSON.vbproj">
+      <Project>{3e271dab-bcc5-4f62-8c22-4b5e07f74df6}</Project>
+      <Name>ZEKE_JSON</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
