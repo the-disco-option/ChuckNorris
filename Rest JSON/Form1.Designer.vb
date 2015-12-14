@@ -46,15 +46,17 @@ Partial Class Form1
         Me.ContentBox.Location = New System.Drawing.Point(15, 16)
         Me.ContentBox.Name = "ContentBox"
         Me.ContentBox.ReadOnly = True
-        Me.ContentBox.Size = New System.Drawing.Size(454, 150)
+        Me.ContentBox.Size = New System.Drawing.Size(332, 163)
         Me.ContentBox.TabIndex = 1
         Me.ContentBox.Text = ""
         '
         'NewButton
         '
-        Me.NewButton.Location = New System.Drawing.Point(15, 172)
+        Me.NewButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.NewButton.Location = New System.Drawing.Point(15, 185)
         Me.NewButton.Name = "NewButton"
-        Me.NewButton.Size = New System.Drawing.Size(454, 23)
+        Me.NewButton.Size = New System.Drawing.Size(332, 29)
         Me.NewButton.TabIndex = 2
         Me.NewButton.Text = "New Joke"
         Me.NewButton.UseVisualStyleBackColor = True
@@ -63,7 +65,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(481, 197)
+        Me.ClientSize = New System.Drawing.Size(359, 216)
         Me.Controls.Add(Me.NewButton)
         Me.Controls.Add(Me.ContentBox)
         Me.Controls.Add(Me.JokeID)
