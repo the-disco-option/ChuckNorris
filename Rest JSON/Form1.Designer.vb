@@ -25,6 +25,7 @@ Partial Class Form1
         Me.JokeID = New System.Windows.Forms.Label()
         Me.ContentBox = New System.Windows.Forms.RichTextBox()
         Me.NewButton = New System.Windows.Forms.Button()
+        Me.CopyButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'JokeID
@@ -56,16 +57,27 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.NewButton.Location = New System.Drawing.Point(15, 185)
         Me.NewButton.Name = "NewButton"
-        Me.NewButton.Size = New System.Drawing.Size(332, 29)
+        Me.NewButton.Size = New System.Drawing.Size(158, 29)
         Me.NewButton.TabIndex = 2
         Me.NewButton.Text = "New Joke"
         Me.NewButton.UseVisualStyleBackColor = True
+        '
+        'CopyButton
+        '
+        Me.CopyButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CopyButton.Location = New System.Drawing.Point(179, 185)
+        Me.CopyButton.Name = "CopyButton"
+        Me.CopyButton.Size = New System.Drawing.Size(168, 29)
+        Me.CopyButton.TabIndex = 3
+        Me.CopyButton.Text = "Copy to clipboard"
+        Me.CopyButton.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(359, 216)
+        Me.Controls.Add(Me.CopyButton)
         Me.Controls.Add(Me.NewButton)
         Me.Controls.Add(Me.ContentBox)
         Me.Controls.Add(Me.JokeID)
@@ -80,5 +92,6 @@ Partial Class Form1
     Friend WithEvents JokeID As System.Windows.Forms.Label
     Friend WithEvents ContentBox As System.Windows.Forms.RichTextBox
     Friend WithEvents NewButton As System.Windows.Forms.Button
+    Friend WithEvents CopyButton As System.Windows.Forms.Button
 
 End Class
