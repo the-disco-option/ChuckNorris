@@ -36,4 +36,7 @@ Public Class Form1
         JSONWEBTEST()
     End Sub
 
+    Private Sub CopuButton_Click(sender As Object, e As EventArgs) Handles CopyButton.Click
+        Clipboard.SetText(ContentBox.Text)
+    End Sub
 End Class
