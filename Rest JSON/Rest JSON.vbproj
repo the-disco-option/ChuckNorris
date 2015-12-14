@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1A9116D7-DAF4-422A-BF07-1133118E7E86}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Rest_JSON.My.MyApplication</StartupObject>
-    <RootNamespace>Rest_JSON</RootNamespace>
-    <AssemblyName>Rest JSON</AssemblyName>
+    <StartupObject>CN.My.MyApplication</StartupObject>
+    <RootNamespace>CN</RootNamespace>
+    <AssemblyName>Chuck Norris</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -20,7 +20,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Rest JSON.xml</DocumentationFile>
+    <DocumentationFile>Chuck Norris.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -30,7 +30,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Rest JSON.xml</DocumentationFile>
+    <DocumentationFile>Chuck Norris.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
