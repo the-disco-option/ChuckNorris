@@ -26,6 +26,7 @@ Partial Class Form1
         Me.ContentBox = New System.Windows.Forms.RichTextBox()
         Me.NewButton = New System.Windows.Forms.Button()
         Me.CopyButton = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'JokeID
@@ -47,7 +48,7 @@ Partial Class Form1
         Me.ContentBox.Location = New System.Drawing.Point(15, 16)
         Me.ContentBox.Name = "ContentBox"
         Me.ContentBox.ReadOnly = True
-        Me.ContentBox.Size = New System.Drawing.Size(332, 163)
+        Me.ContentBox.Size = New System.Drawing.Size(332, 159)
         Me.ContentBox.TabIndex = 1
         Me.ContentBox.Text = ""
         '
@@ -55,7 +56,7 @@ Partial Class Form1
         '
         Me.NewButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.NewButton.Location = New System.Drawing.Point(15, 185)
+        Me.NewButton.Location = New System.Drawing.Point(15, 181)
         Me.NewButton.Name = "NewButton"
         Me.NewButton.Size = New System.Drawing.Size(158, 29)
         Me.NewButton.TabIndex = 2
@@ -65,18 +66,32 @@ Partial Class Form1
         'CopyButton
         '
         Me.CopyButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CopyButton.Location = New System.Drawing.Point(179, 185)
+        Me.CopyButton.Location = New System.Drawing.Point(179, 181)
         Me.CopyButton.Name = "CopyButton"
         Me.CopyButton.Size = New System.Drawing.Size(168, 29)
         Me.CopyButton.TabIndex = 3
         Me.CopyButton.Text = "Copy to clipboard"
         Me.CopyButton.UseVisualStyleBackColor = True
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.LinkLabel1.AutoEllipsis = True
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.LinkColor = System.Drawing.SystemColors.WindowText
+        Me.LinkLabel1.Location = New System.Drawing.Point(2, 213)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(80, 13)
+        Me.LinkLabel1.TabIndex = 4
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "From ICNb.com"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(359, 216)
+        Me.ClientSize = New System.Drawing.Size(359, 230)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.CopyButton)
         Me.Controls.Add(Me.NewButton)
         Me.Controls.Add(Me.ContentBox)
@@ -93,5 +108,6 @@ Partial Class Form1
     Friend WithEvents ContentBox As System.Windows.Forms.RichTextBox
     Friend WithEvents NewButton As System.Windows.Forms.Button
     Friend WithEvents CopyButton As System.Windows.Forms.Button
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 
 End Class

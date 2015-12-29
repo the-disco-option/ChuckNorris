@@ -65,4 +65,9 @@ Public Class Form1
     Private Sub CopyButton_Click(sender As Object, e As EventArgs) Handles CopyButton.Click
         Clipboard.SetText(ContentBox.Text)
     End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Dim webAdress As String = "http://www.icndb.com/"
+        Process.Start(webAdress)
+    End Sub
 End Class
