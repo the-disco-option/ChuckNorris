@@ -44,8 +44,8 @@ Public Class Form1
 
     Private Sub SetFormValues(ByVal unsafeText As String, ByVal id As String)
 
-        unsafeText = unsafeText.Replace("&quot;", Chr(34)) 'HACK Helps, but no preferred.
-        ContentBox.Text = unsafeText
+        Dim safetext As String = System.Net.WebUtility.HtmlDecode(unsafeText)
+        ContentBox.Text = safetext
         JokeID.Text = "Joke: " & id
     End Sub
     ''' <summary>
