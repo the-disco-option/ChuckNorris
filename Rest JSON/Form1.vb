@@ -9,9 +9,12 @@ Imports ZEKE_JSON
 Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        JSONWEBTEST()
+        GetJoke()
     End Sub
-
+    ''' <summary>
+    ''' A Joke
+    ''' </summary>
+    ''' <remarks></remarks>
     Public Class Joke
         Public type As String
         Public value As New ValueObj
@@ -20,8 +23,11 @@ Public Class Form1
             Public joke As String
         End Class
     End Class
-
-    Private Sub JSONWEBTEST()
+    ''' <summary>
+    ''' Get a random joke.
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub GetJoke()
         Dim URL As String = "http://api.icndb.com/jokes/random"
         Dim Chuck As New Joke
 
@@ -31,12 +37,22 @@ Public Class Form1
         JokeID.Text = "Joke: " & Chuck.value.id
     End Sub
 
-
+    ''' <summary>
+    ''' The New button was pressed
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub NewButton_Click(sender As Object, e As EventArgs) Handles NewButton.Click
-        JSONWEBTEST()
+        GetJoke()
     End Sub
-
-    Private Sub CopuButton_Click(sender As Object, e As EventArgs) Handles CopyButton.Click
+    ''' <summary>
+    ''' The Copy button was clicked
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub CopyButton_Click(sender As Object, e As EventArgs) Handles CopyButton.Click
         Clipboard.SetText(ContentBox.Text)
     End Sub
 End Class
