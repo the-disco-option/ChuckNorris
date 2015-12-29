@@ -31,7 +31,8 @@ Public Class Form1
         Dim URL As String = "http://api.icndb.com/jokes/random?exclude=[explicit]"
         Dim Chuck As New Joke
 
-        'URL = Nothing 'HACK Uncomment to cause ArgumentNullException
+        'URL = Nothing 
+        'HACK: Set URL to Nothing in order to trigger an ArgumentNullException. Removable.
         Try
             Chuck = Z_JSON.WebToObject(Of Joke)(URL)
         Catch e As ArgumentNullException
