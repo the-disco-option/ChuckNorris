@@ -33,7 +33,7 @@ Public Class Form1
 
         Chuck = Z_JSON.WebToObject(Of Joke)(URL)
         ContentBox.Text = Chuck.value.joke
-        ContentBox.Text = ContentBox.Text.Replace("&quot;", "'")
+        ContentBox.Text = ContentBox.Text.Replace("&quot;", Chr(34))
         JokeID.Text = "Joke: " & Chuck.value.id
     End Sub
 
