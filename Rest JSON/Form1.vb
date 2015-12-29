@@ -31,12 +31,21 @@ Public Class Form1
         Dim URL As String = "http://api.icndb.com/jokes/random"
         Dim Chuck As New Joke
 
-        Chuck = Z_JSON.WebToObject(Of Joke)(URL)
-        ContentBox.Text = Chuck.value.joke
-        ContentBox.Text = ContentBox.Text.Replace("&quot;", Chr(34))
-        JokeID.Text = "Joke: " & Chuck.value.id
+        URL = Nothing 'HACK Uncomment to cause ArgumentNullException
+        Try
+            Chuck = Z_JSON.WebToObject(Of Joke)(URL)
+        Catch e As ArgumentNullException
+            SetFormValues("404: Chuck Not Found", "404")
+        End Try
+        SetFormValues(Chuck.value.joke, Chuck.value.id)
     End Sub
 
+    Private Sub SetFormValues(ByVal unsafeText As String, ByVal id As String)
+
+        unsafeText = ContentBox.Text.Replace("&quot;", Chr(34)) 'HACK Helps, but no preferred.
+        ContentBox.Text = unsafeText
+        JokeID.Text = "Joke: " & id
+    End Sub
     ''' <summary>
     ''' The New button was pressed
     ''' </summary>
