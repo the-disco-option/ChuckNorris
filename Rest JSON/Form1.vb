@@ -28,21 +28,22 @@ Public Class Form1
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub GetJoke()
-        Dim URL As String = "http://api.icndb.com/jokes/random"
+        Dim URL As String = "http://api.icndb.com/jokes/random?exclude=[explicit]"
         Dim Chuck As New Joke
 
-        URL = Nothing 'HACK Uncomment to cause ArgumentNullException
+        'URL = Nothing 'HACK Uncomment to cause ArgumentNullException
         Try
             Chuck = Z_JSON.WebToObject(Of Joke)(URL)
         Catch e As ArgumentNullException
             SetFormValues("404: Chuck Not Found", "404")
+            Return
         End Try
         SetFormValues(Chuck.value.joke, Chuck.value.id)
     End Sub
 
     Private Sub SetFormValues(ByVal unsafeText As String, ByVal id As String)
 
-        unsafeText = ContentBox.Text.Replace("&quot;", Chr(34)) 'HACK Helps, but no preferred.
+        unsafeText = unsafeText.Replace("&quot;", Chr(34)) 'HACK Helps, but no preferred.
         ContentBox.Text = unsafeText
         JokeID.Text = "Joke: " & id
     End Sub
